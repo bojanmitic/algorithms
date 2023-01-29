@@ -14,7 +14,7 @@ const maxSubarraySum = (arr, num) => {
     for(let i = num; i < arr.length; i++) {
 			//subtract last in the summed and add after summed
         tempSum = tempSum - arr[i - num] + arr[i]; 
-        if(tempSum > maxSum) maxSum = tempSum;
+        maxSum = Math.max(maxSum, tempSum);
     }
     return maxSum;
 }
